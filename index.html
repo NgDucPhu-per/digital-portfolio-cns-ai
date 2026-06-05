@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Portfolio by Nguyen Duc Phu</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> <span id="nav-logo-text">Portfolio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Trang chủ</a></li>
+                <li><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> Giới thiệu</a></li>
+                <li><a href="#projects" class="nav-link"><i class="fa-solid fa-list-check"></i> Dự án</a></li>
+                <li><a href="#summary" class="nav-link"><i class="fa-solid fa-chart-line"></i> Tổng kết</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="home" class="section active-section">
+            <div class="hero-wrapper fade-in">
+                <div class="hero-text">
+                    <span class="badge">Chào mừng đến với Digital Portfolio</span>
+                    <h1 id="hero-name">Đang tải...</h1>
+                    <p class="hero-sub">Môn học: <span id="hero-subject">...</span></p>
+                    <p class="hero-sub">Lớp: <span id="hero-class">...</span></p>
+
+                    <div class="cta-buttons">
+                    </div>
+                </div>
+                <div class="hero-avatar">
+                    <div class="avatar-frame">
+                        <img id="hero-img" src="https://lh3.googleusercontent.com/d/12TvGpuB6UT5Iga8P7UJMxBYOPSCUGIFn" alt="Avatar">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section id-page-section">
+            <div class="section-header fade-in">
+                <h2><i class="fa-solid fa-user-tag"></i> Giới thiệu bản thân</h2>
+                <p></p>
+            </div>
+            
+            <div class="about-grid grid-2">
+                <div class="card glass-card fade-in">
+                    <h3><i class="fa-solid fa-address-card"></i> Hồ sơ sinh viên</h3>
+                    <ul class="info-list">
+                        <li><strong>Họ và tên:</strong> <span id="about-name">...</span></li>
+                        <li><strong>Mã số sinh viên:</strong> <span id="about-id">...</span></li>
+                        <li><strong>Ngành học:</strong> <span id="about-major">...</span></li>
+                        <li><strong>Trường:</strong> <span id="about-university">...</span></li>
+                        <li><strong>Sở thích:</strong> <span id="about-hobbies">...</span></li>
+                    </ul>
+                </div>
+
+                <div class="card glass-card fade-in">
+                    <h3><i class="fa-solid fa-bullseye"></i> Mục tiêu & Định hướng cá nhân</h3>
+                    <div class="goals-container" id="about-goals">
+                        </div>
+                </div>
+            </div>
+
+            <div class="card glass-card fade-in" style="margin-top: 2rem;">
+                <h3><i class="fa-solid fa-circle-nodes"></i> Ý nghĩa & Mục tiêu cốt lõi của Portfolio</h3>
+                <div class="grid-2" id="portfolio-goals-container" style="margin-top: 1rem; gap: 1.5rem;">
+                    </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section id-page-section">
+            <div class="section-header fade-in">
+                <h2><i class="fa-solid fa-briefcase"></i> Danh mục các bài tập dự án</h2>
+                <p>Tổng hợp các sản phẩm xuyên suốt học kỳ</p>
+            </div>
+
+            <div class="task-tabs-grid fade-in">
+                <button class="task-tab-btn active" onclick="switchTask(1)"><i class="fa-solid fa-folder-tree"></i> Bài 1</button>
+                <button class="task-tab-btn" onclick="switchTask(2)"><i class="fa-solid fa-magnifying-glass"></i> Bài 2</button>
+                <button class="task-tab-btn" onclick="switchTask(3)"><i class="fa-solid fa-terminal"></i> Bài 3</button>
+                <button class="task-tab-btn" onclick="switchTask(4)"><i class="fa-solid fa-users"></i> Bài 4</button>
+                <button class="task-tab-btn" onclick="switchTask(5)"><i class="fa-solid fa-wand-magic-sparkles"></i> Bài 5</button>
+                <button class="task-tab-btn" onclick="switchTask(6)"><i class="fa-solid fa-scale-balanced"></i> Bài 6</button>
+            </div>
+
+            <div id="task-viewport" class="fade-in">
+                </div>
+        </section>
+
+        <section id="summary" class="section id-page-section">
+            <div class="section-header fade-in">
+                <h2><i class="fa-solid fa-chart-line"></i> Tổng kết học tập</h2>
+                <p></p>
+            </div>
+
+            <div class="summary-wrapper grid-2">
+                <div class="card glass-card fade-in">
+                    <h3><i class="fa-solid fa-bars-progress"></i> Bản đồ năng lực kỹ năng (%)</h3>
+                    <div id="skills-progress-bars">
+                        </div>
+                </div>
+
+                <div class="card glass-card fade-in">
+                    <h3><i class="fa-solid fa-heart-pulse"></i> Trải nghiệm & Cảm nhận cá nhân</h3>
+                    <div id="summary-experiences-box" style="margin-top: 1rem; line-height: 1.7;">
+                        </div>
+                </div>
+            </div>
+
+            <div class="grid-2" style="margin-top: 2rem;">
+                <div class="card glass-card fade-in" style="border-left: 4px solid var(--primary-light);">
+                    <h3><i class="fa-solid fa-star"></i> Điểm tâm đắc nhất</h3>
+                    <p id="summary-highlights" style="margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);"></p>
+                </div>
+                <div class="card glass-card fade-in" style="border-left: 4px solid #b91c1c;">
+                    <h3><i class="fa-solid fa-fire-extinguisher"></i> Thách thức lớn nhất đã xử lý</h3>
+                    <p id="summary-challenges" style="margin-top: 0.5rem; font-size: 0.95rem; line-height: 1.6; color: var(--text-secondary);"></p>
+                </div>
+            </div>
+
+            <div class="card glass-card timeline-card fade-in" style="margin-top: 2rem;">
+                <h3><i class="fa-solid fa-map-location-dot"></i> Lộ trình phát triển bản thân trong tương lai</h3>
+                <div class="timeline" id="future-timeline">
+                    </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2026 Digital Portfolio by <span id="footer-student-name">...</span>. Tất cả các quyền được bảo lưu.</p>
+            <p class="footer-subtext">Nhập môn Công nghệ số & Ứng dụng Trí tuệ nhân tạo</p>
+        </div>
+    </footer>
+
+    <button id="back-to-top" aria-label="Trở lại đầu trang">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
