@@ -1,6 +1,6 @@
 ## 🌟 Tổng quan dự án (Project Overview)
 
-**Xem trực tiếp trang Web:** https://ngducphu-per.github.io/digital-portfolio-cns-ai/
+**Xem trực tiếp trang Web:** https://dpxgdp.github.io/digital-portfolio-cns-ai/
 
 ## 📂 Cấu trúc các dự án thành phần (Bài 1 -> Bài 6)
 
